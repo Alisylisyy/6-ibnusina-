@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VI Ibnu Sina - Angkatan 27 SDIT Al Iman</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts for Retro Aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Fredoka:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config for Custom Retro Palette -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        retro: {
+                            yellow: '#F9C80E',
+                            orange: '#F86624',
+                            red: '#EA3546',
+                            teal: '#43BBCD',
+                            blue: '#2B59C3',
+                            cream: '#FFF9EB',
+                            dark: '#222222',
+                            brown: '#4A3B32'
+                        }
+                    },
+                    fontFamily: {
+                        pixel: ['"VT323"', 'monospace'],
+                        retro: ['"Fredoka"', 'sans-serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'retro-sm': '3px 3px 0px 0px #222222',
+                        'retro': '5px 5px 0px 0px #222222',
+                        'retro-lg': '8px 8px 0px 0px #222222',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FFF9EB;
+            background-image: radial-gradient(#F86624 0.75px, transparent 0.75px), radial-gradient(#43BBCD 0.75px, #FFF9EB 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            color: #222222;
+        }
+
+        .border-retro {
+            border: 3.5px solid #222222;
+        }
+
+        .polaroid-frame {
+            background: white;
+            border: 3.5px solid #222222;
+            box-shadow: 6px 6px 0px #222222;
+            transition: all 0.3s ease;
+        }
+
+        .polaroid-frame:hover {
+            transform: translateY(-6px) rotate(-1deg);
+            box-shadow: 10px 10px 0px #EA3546;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .spinning {
+            animation: spin 3s linear infinite;
+        }
+
+        .paused {
+            animation-play-state: paused;
+        }
+
+        .btn-retro {
+            transition: all 0.1s ease;
+        }
+
+        .btn-retro:active {
+            transform: translate(3px, 3px);
+            box-shadow: 2px 2px 0px #222222 !important;
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 22s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-retro-yellow selection:text-black">
+
+    <div class="bg-retro-red text-white py-2 border-b-4 border-retro font-retro text-lg tracking-wider overflow-hidden">
+        <div class="marquee-container">
+            <div class="marquee-content font-bold uppercase">
+                🚀 VI IBNU SINA - ANGKATAN 27 SDIT AL IMAN ★ "HATIKU, PIKIRANKU, TUBUHKU FRESH FRESH FRESH ALLAHUAKBAR!" ★ INSTAGRAM: @KELAS.CAKEUP ★ TIKTOK: @6_IBNU_SINA_27 ★ 
+                🚀 VI IBNU SINA - ANGKATAN 27 SDIT AL IMAN ★ "HATIKU, PIKIRANKU, TUBUHKU FRESH FRESH FRESH ALLAHUAKBAR!" ★ INSTAGRAM: @KELAS.CAKEUP ★ TIKTOK: @6_IBNU_SINA_27 ★ 
+            </div>
+        </div>
+    </div>
+
+    <header class="sticky top-2 z-40 px-4 max-w-6xl mx-auto w-full my-3">
+        <nav class="bg-retro-yellow border-retro rounded-2xl p-4 shadow-retro flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 bg-retro-orange rounded-xl border-retro flex items-center justify-center text-white font-pixel text-3xl shadow-retro-sm">
+                    6
+                </div>
+                <div>
+                    <h1 class="font-retro font-bold text-2xl text-retro-dark leading-none">6 IBNU SINA</h1>
+                    <p class="font-pixel text-xl text-retro-brown font-semibold">Angkatan 27 SDIT Al Iman</p>
+                </div>
+            </div>
+
+            <div class="flex items-center flex-wrap gap-2 text-sm font-retro">
+                <a href="#struktur" class="px-3 py-1.5 bg-white border-retro rounded-lg shadow-retro-sm hover:bg-retro-teal hover:text-white transition btn-retro">
+                    <i class="fa-solid fa-sitemap mr-1"></i> Pengurus
+                </a>
+                <a href="#piket" class="px-3 py-1.5 bg-white border-retro rounded-lg shadow-retro-sm hover:bg-retro-orange hover:text-white transition btn-retro">
+                    <i class="fa-solid fa-broom mr-1"></i> Piket
+                </a>
+                <a href="#galeri" class="px-3 py-1.5 bg-white border-retro rounded-lg shadow-retro-sm hover:bg-retro-red hover:text-white transition btn-retro">
+                    <i class="fa-solid fa-camera-retro mr-1"></i> Galeri
+                </a>
+                <a href="#buku-tamu" class="px-3 py-1.5 bg-white border-retro rounded-lg shadow-retro-sm hover:bg-retro-blue hover:text-white transition btn-retro">
+                    <i class="fa-solid fa-comments mr-1"></i> Pesan
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 w-full space-y-10 my-6">
+
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+            <!-- Hero Title & Motto -->
+            <div class="lg:col-span-7 bg-white border-retro rounded-3xl p-6 md:p-8 shadow-retro-lg flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-retro-teal rounded-full border-retro opacity-20"></div>
+                <div>
+                    <div class="inline-block bg-retro-teal text-white font-pixel text-2xl px-4 py-1 rounded-full border-retro shadow-retro-sm mb-4">
+                        ★ CLASS OF 2026 / ANGKATAN 27 ★
+                    </div>
+                    <h2 class="font-retro text-4xl md:text-6xl font-bold text-retro-dark mb-3 leading-tight">
+                        Selamat Datang di Website <span class="text-retro-orange underline underline-offset-4 decoration-retro-dark">VI Ibnu Sina</span>!
+                    </h2>
+                    <p class="text-gray-700 text-lg font-medium mb-6">
+                        Portal resmi kenangan, jadwal piket, serta informasi seru kelas VI Ibnu Sina SDIT Al Iman.
+                    </p>
+                </div>
+
+                <!-- Motto Quote Badge -->
+                <div class="bg-retro-cream border-retro rounded-2xl p-4 md:p-5 shadow-retro relative">
+                    <div class="text-retro-red font-pixel text-2xl font-bold mb-1">
+                        <i class="fa-solid fa-quote-left mr-2"></i> Yel-Yel Kebanggaan Kelas:
+                    </div>
+                    <p class="font-retro text-xl md:text-2xl font-bold text-retro-dark italic">
+                        "Hatiku, Pikiranku, Tubuhku Fresh Fresh Fresh Allahuakbar!"
+                    </p>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 bg-retro-brown border-retro rounded-3xl p-6 shadow-retro-lg text-white flex flex-col justify-between relative">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="font-pixel text-2xl text-retro-yellow"><i class="fa-solid fa-tape mr-2"></i>RETRO PLAYER</span>
+                    <span id="player-status" class="bg-retro-red px-3 py-0.5 rounded-full text-xs font-bold uppercase border-retro border">STOPPED</span>
+                </div>
+
+                <div class="bg-zinc-800 border-retro rounded-2xl p-4 my-2 shadow-inner">
+                    <div class="bg-retro-cream border-retro rounded-xl p-3 text-retro-dark flex justify-between items-center mb-3">
+                        <div class="truncate">
+                            <p class="text-xs font-bold text-retro-orange uppercase tracking-wider">Now Playing</p>
+                            <p class="font-retro font-bold text-lg truncate" id="track-title">Teh Hijau - Tulus</p>
+                        </div>
+                        <i class="fa-solid fa-music text-retro-teal text-2xl animate-bounce"></i>
+                    </div>
+
+                    <!-- Cassette Reel Visualizer -->
+                    <div class="bg-zinc-900 border-2 border-zinc-700 rounded-lg p-3 flex justify-around items-center">
+                        <div class="w-16 h-16 rounded-full bg-zinc-300 border-4 border-black flex items-center justify-center relative">
+                            <div id="left-reel" class="w-12 h-12 rounded-full border-4 border-dashed border-zinc-800 paused"></div>
+                        </div>
+                        <div class="w-20 h-8 bg-amber-900/60 border border-amber-700 rounded flex items-center justify-center">
+                            <div class="h-1 bg-amber-400 w-full animate-pulse"></div>
+                        </div>
+                        <div class="w-16 h-16 rounded-full bg-zinc-300 border-4 border-black flex items-center justify-center relative">
+                            <div id="right-reel" class="w-12 h-12 rounded-full border-4 border-dashed border-zinc-800 paused"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between gap-2 mt-2">
+                    <button id="play-btn" onclick="toggleAudio()" class="flex-1 bg-retro-yellow text-retro-dark font-retro font-bold py-3 px-4 rounded-xl border-retro shadow-retro hover:bg-yellow-400 transition btn-retro text-center">
+                        <i class="fa-solid fa-play mr-2" id="play-icon"></i> <span id="play-text">Putar Musik</span>
+                    </button>
+                    <button onclick="stopAudio()" class="bg-retro-red text-white p-3 rounded-xl border-retro shadow-retro hover:bg-red-600 transition btn-retro">
+                        <i class="fa-solid fa-square"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-retro-cream border-retro rounded-3xl p-6 shadow-retro">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-retro-red rounded-xl border-retro flex items-center justify-center text-white text-2xl shadow-retro-sm">
+                        <i class="fa-solid fa-hashtag"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-retro text-2xl font-bold">Media Sosial Kelas</h3>
+                        <p class="text-sm text-gray-600 font-medium">Ikuti kegiatan dan momen seru VI Ibnu Sina di sosial media</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 w-full md:w-auto">
+                    <a href="https://instagram.com/kelas.cakeup" target="_blank" class="flex-1 md:flex-none px-5 py-3 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 text-white font-retro font-bold rounded-2xl border-retro shadow-retro hover:opacity-90 transition btn-retro flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-instagram text-xl"></i> @kelas.cakeup
+                    </a>
+                    <a href="https://tiktok.com/@6_ibnu_sina_27" target="_blank" class="flex-1 md:flex-none px-5 py-3 bg-black text-white font-retro font-bold rounded-2xl border-retro shadow-retro hover:bg-gray-800 transition btn-retro flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-tiktok text-xl"></i> @6_ibnu_sina_27
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="struktur" class="scroll-mt-24 space-y-6">
+            <div class="flex items-center space-x-3">
+                <span class="bg-retro-orange text-white font-pixel text-3xl px-3 py-1 rounded-xl border-retro shadow-retro-sm">01</span>
+                <h2 class="font-retro text-3xl md:text-4xl font-bold text-retro-dark">Struktur Kepengurusan Kelas</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- Wali Kelas -->
+                <div class="bg-retro-yellow border-retro rounded-2xl p-5 shadow-retro relative overflow-hidden col-span-1 sm:col-span-2 lg:col-span-3 flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-16 h-16 bg-white rounded-2xl border-retro flex items-center justify-center text-retro-orange text-3xl shadow-retro-sm">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                        </div>
+                        <div>
+                            <span class="bg-retro-orange text-white text-xs font-bold px-3 py-0.5 rounded-full border border-retro uppercase">Wali Kelas</span>
+                            <h3 class="font-retro text-2xl font-bold text-retro-dark mt-1">Ibu Sri Rahayu Budiarti, S.E.</h3>
+                            <p class="text-sm font-medium text-retro-brown">Pembimbing & Guru Wali Kelas VI Ibnu Sina</p>
+                        </div>
+                    </div>
+                    <div class="bg-white px-4 py-2 rounded-xl border-retro text-xs font-bold shadow-retro-sm text-retro-dark">
+                        🌟 Wali Kelas Terfavorit
+                    </div>
+                </div>
+
+                <!-- Ketua Kelas -->
+                <div class="bg-white border-retro rounded-2xl p-5 shadow-retro">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="bg-retro-red text-white text-xs font-bold px-3 py-1 rounded-lg border border-retro">Ketua Kelas</span>
+                        <i class="fa-solid fa-crown text-retro-yellow text-2xl"></i>
+                    </div>
+                    <h3 class="font-retro text-2xl font-bold text-retro-dark">Farisha</h3>
+                </div>
+
+                <!-- Wakil Ketua -->
+                <div class="bg-white border-retro rounded-2xl p-5 shadow-retro">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="bg-retro-blue text-white text-xs font-bold px-3 py-1 rounded-lg border border-retro">Wakil Ketua</span>
+                        <i class="fa-solid fa-shield-halved text-retro-blue text-2xl"></i>
+                    </div>
+                    <h3 class="font-retro text-2xl font-bold text-retro-dark">Rangga</h3>
+                </div>
+
+                <!-- Sekretaris -->
+                <div class="bg-white border-retro rounded-2xl p-5 shadow-retro">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="bg-retro-teal text-white text-xs font-bold px-3 py-1 rounded-lg border border-retro">Sekretaris</span>
+                        <i class="fa-solid fa-pen-to-square text-retro-teal text-2xl"></i>
+                    </div>
+                    <h3 class="font-retro text-2xl font-bold text-retro-dark">Alisya</h3>
+                </div>
+
+                <!-- Bendahara -->
+                <div class="bg-white border-retro rounded-2xl p-5 shadow-retro">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="bg-retro-yellow text-retro-dark text-xs font-bold px-3 py-1 rounded-lg border border-retro">Bendahara</span>
+                        <i class="fa-solid fa-wallet text-retro-yellow text-2xl"></i>
+                    </div>
+                    <h3 class="font-retro text-2xl font-bold text-retro-dark">Hanum</h3>
+                </div>
+
+                <!-- Sie Kebersihan -->
+                <div class="bg-white border-retro rounded-2xl p-5 shadow-retro">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-lg border border-retro">Sie Kebersihan</span>
+                        <i class="fa-solid fa-broom text-emerald-500 text-2xl"></i>
+                    </div>
+                    <h3 class="font-retro text-2xl font-bold text-retro-dark">Azzam</h3>
+                </div>
+
+                <!-- Sie Keamanan -->
+                <div class="bg-white border-retro rounded-2xl p-5 shadow-retro">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-lg border border-retro">Sie Keamanan</span>
+                        <i class="fa-solid fa-user-shield text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-retro text-2xl font-bold text-retro-dark">Farrel</h3>
+                </div>
+
+                <!-- Sie Kesehatan LK -->
+                <div class="bg-white border-retro rounded-2xl p-5 shadow-retro">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="bg-rose-500 text-white text-xs font-bold px-3 py-1 rounded-lg border border-retro">Sie Kesehatan (LK)</span>
+                        <i class="fa-solid fa-kit-medical text-rose-500 text-2xl"></i>
+                    </div>
+                    <h3 class="font-retro text-2xl font-bold text-retro-dark">Alaric</h3>
+                </div>
+
+                <!-- Sie Kesehatan PR -->
+                <div class="bg-white border-retro rounded-2xl p-5 shadow-retro">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-lg border border-retro">Sie Kesehatan (PR)</span>
+                        <i class="fa-solid fa-heart-pulse text-pink-500 text-2xl"></i>
+                    </div>
+                    <h3 class="font-retro text-2xl font-bold text-retro-dark">Alea</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="piket" class="scroll-mt-24 space-y-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div class="flex items-center space-x-3">
+                    <span class="bg-retro-teal text-white font-pixel text-3xl px-3 py-1 rounded-xl border-retro shadow-retro-sm">02</span>
+                    <h2 class="font-retro text-3xl md:text-4xl font-bold text-retro-dark">Jadwal Piket Kebersihan</h2>
+                </div>
+                <div class="bg-retro-yellow border-retro px-4 py-2 rounded-xl shadow-retro flex items-center gap-2">
+                    <i class="fa-regular fa-calendar-check text-retro-dark text-xl"></i>
+                    <span class="font-retro text-sm font-bold">Hari Ini: <span id="current-day-name" class="text-retro-red uppercase underline">Menghitung...</span></span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <!-- Senin -->
+                <div id="piket-senin" class="bg-white border-retro rounded-2xl p-4 shadow-retro">
+                    <div class="bg-retro-red text-white font-pixel text-2xl px-3 py-1 rounded-lg border-retro text-center mb-3">
+                        SENIN
+                    </div>
+                    <ul class="space-y-1.5 text-sm font-medium">
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Alisya</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Reynand</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Fadhil</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Qiyya</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Bilqis</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Syifa</li>
+                    </ul>
+                </div>
+
+                <!-- Selasa -->
+                <div id="piket-selasa" class="bg-white border-retro rounded-2xl p-4 shadow-retro">
+                    <div class="bg-retro-orange text-white font-pixel text-2xl px-3 py-1 rounded-lg border-retro text-center mb-3">
+                        SELASA
+                    </div>
+                    <ul class="space-y-1.5 text-sm font-medium">
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Adrian</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Hilmi</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Faiza</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Saphira</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Farisha</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Fenti</li>
+                    </ul>
+                </div>
+
+                <!-- Rabu -->
+                <div id="piket-rabu" class="bg-white border-retro rounded-2xl p-4 shadow-retro">
+                    <div class="bg-retro-yellow text-retro-dark font-pixel text-2xl px-3 py-1 rounded-lg border-retro text-center mb-3">
+                        RABU
+                    </div>
+                    <ul class="space-y-1.5 text-sm font-medium">
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Rangga</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Farrel</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Adibah</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Alea</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Aqilah</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Nayla</li>
+                    </ul>
+                </div>
+
+                <!-- Kamis -->
+                <div id="piket-kamis" class="bg-white border-retro rounded-2xl p-4 shadow-retro">
+                    <div class="bg-retro-teal text-white font-pixel text-2xl px-3 py-1 rounded-lg border-retro text-center mb-3">
+                        KAMIS
+                    </div>
+                    <ul class="space-y-1.5 text-sm font-medium">
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Kenzie</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Habibi</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Ibrahim</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Hanum</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Mika</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Maira</li>
+                    </ul>
+                </div>
+
+                <!-- Jumat -->
+                <div id="piket-jumat" class="bg-white border-retro rounded-2xl p-4 shadow-retro">
+                    <div class="bg-retro-blue text-white font-pixel text-2xl px-3 py-1 rounded-lg border-retro text-center mb-3">
+                        JUM'AT
+                    </div>
+                    <ul class="space-y-1.5 text-sm font-medium">
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Azzam</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Athar</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Alaric</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Khanza Q</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Khanza R</li>
+                        <li class="bg-retro-cream p-1.5 rounded-lg border border-gray-200">Maryam</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeri" class="scroll-mt-24 space-y-6">
+            <div class="flex items-center space-x-3">
+                <span class="bg-retro-red text-white font-pixel text-3xl px-3 py-1 rounded-xl border-retro shadow-retro-sm">03</span>
+                <h2 class="font-retro text-3xl md:text-4xl font-bold text-retro-dark">Galeri Kenangan Polaroid</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="polaroid-frame p-4 rounded-xl cursor-pointer" onclick="openLightbox('image_5.png', 'Angkatan 27 VI Ibnu Sina')">
+                    <div class="aspect-[3/4] bg-zinc-200 border-retro rounded-lg overflow-hidden mb-3">
+                        <img src="image_5.png" alt="Foto Angkatan 27" class="w-full h-full object-cover">
+                    </div>
+                    <p class="font-retro font-bold text-center text-retro-dark">VI Ibnu Sina Angkatan 27 ✨</p>
+                </div>
+
+                <div class="polaroid-frame p-4 rounded-xl cursor-pointer" onclick="openLightbox('image_2.png', 'Bersama Ibu Sri Rahayu Budiarti, S.E.')">
+                    <div class="aspect-[3/4] bg-zinc-200 border-retro rounded-lg overflow-hidden mb-3">
+                        <img src="image_2.png" alt="Bersama Wali Kelas" class="w-full h-full object-cover">
+                    </div>
+                    <p class="font-retro font-bold text-center text-retro-dark">Bersama Ibu Wali Kelas ❤️</p>
+                </div>
+
+                <div class="polaroid-frame p-4 rounded-xl cursor-pointer" onclick="openLightbox('image_3.png', 'Momen Outing Class SDIT Al Iman')">
+                    <div class="aspect-[3/4] bg-zinc-200 border-retro rounded-lg overflow-hidden mb-3">
+                        <img src="image_3.png" alt="Outing Class" class="w-full h-full object-cover">
+                    </div>
+                    <p class="font-retro font-bold text-center text-retro-dark">Momen Outing Seru 🏢</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="buku-tamu" class="scroll-mt-24 space-y-6">
+            <div class="flex items-center space-x-3">
+                <span class="bg-retro-blue text-white font-pixel text-3xl px-3 py-1 rounded-xl border-retro shadow-retro-sm">04</span>
+                <h2 class="font-retro text-3xl md:text-4xl font-bold text-retro-dark">Buku Tamu / Kesan Pesan</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <div class="lg:col-span-5 bg-white border-retro rounded-3xl p-6 shadow-retro">
+                    <h3 class="font-retro text-2xl font-bold text-retro-dark mb-4">
+                        <i class="fa-solid fa-paper-plane text-retro-orange mr-2"></i>Tulis Pesan Kamu
+                    </h3>
+                    <form id="guestbook-form" onsubmit="saveMessage(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-gray-700 mb-1">Nama:</label>
+                            <input type="text" id="sender-name" required placeholder="Nama Kamu" class="w-full px-4 py-2.5 bg-retro-cream border-retro rounded-xl focus:outline-none text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-gray-700 mb-1">Pesan / Kesan:</label>
+                            <textarea id="sender-message" required rows="4" placeholder="Tuliskan harapan/kesan untuk kelas VI Ibnu Sina..." class="w-full px-4 py-2.5 bg-retro-cream border-retro rounded-xl focus:outline-none text-sm resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-retro-orange text-white font-retro text-lg py-3 rounded-xl border-retro shadow-retro hover:bg-orange-600 transition btn-retro">
+                            Kirim Pesan 🚀
+                        </button>
+                    </form>
+                </div>
+
+                <div class="lg:col-span-7 bg-retro-cream border-retro rounded-3xl p-6 shadow-retro">
+                    <div class="flex items-center justify-between mb-4 border-b-2 border-retro/20 pb-3">
+                        <h3 class="font-retro text-2xl font-bold text-retro-dark">Dinding Pesan</h3>
+                        <span id="message-count" class="bg-retro-teal text-white font-pixel text-xl px-3 py-0.5 rounded-full border border-retro">0 Pesan</span>
+                    </div>
+                    <div id="messages-container" class="space-y-3 max-h-[320px] overflow-y-auto pr-1"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-retro-dark text-white border-t-4 border-retro mt-16 py-8 px-4 text-center">
+        <p class="font-retro text-2xl text-retro-yellow">VI IBNU SINA ★ ANGKATAN 27 SDIT AL IMAN</p>
+        <p class="font-pixel text-xl text-gray-400 mt-1">Fresh Fresh Fresh Allahuakbar!</p>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center p-4" onclick="closeLightbox()">
+        <div class="bg-white border-retro rounded-2xl p-4 max-w-2xl w-full relative" onclick="event.stopPropagation()">
+            <button onclick="closeLightbox()" class="absolute -top-3 -right-3 w-8 h-8 bg-retro-red text-white font-bold rounded-full border-retro">✕</button>
+            <img id="lightbox-img" src="" alt="Full view" class="w-full max-h-[70vh] object-contain rounded-lg border-retro">
+            <p id="lightbox-caption" class="font-retro text-xl text-center mt-3 font-bold"></p>
+        </div>
+    </div>
+
+    <script>
+        // Audio Player Simulation
+        let audioCtx = null;
+        let isPlaying = false;
+        let melodyInterval = null;
+
+        function toggleAudio() {
+            isPlaying ? stopAudio() : startRetroMusic();
+        }
+
+        function startRetroMusic() {
+            try {
+                if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                if (audioCtx.state === 'suspended') audioCtx.resume();
+
+                isPlaying = true;
+                updateAudioUI(true);
+
+                const notes = [261.63, 329.63, 392.00, 523.25, 440.00, 349.23, 329.63, 293.66];
+                let noteIdx = 0;
+
+                melodyInterval = setInterval(() => {
+                    if (!isPlaying) return;
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    
+                    osc.type = 'triangle';
+                    osc.frequency.value = notes[noteIdx % notes.length];
+                    gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.4);
+
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.4);
+                    noteIdx++;
+                }, 400);
+
+            } catch (e) {
+                updateAudioUI(true);
+            }
+        }
+
+        function stopAudio() {
+            isPlaying = false;
+            if (melodyInterval) clearInterval(melodyInterval);
+            updateAudioUI(false);
+        }
+
+        function updateAudioUI(active) {
+            const statusLabel = document.getElementById('player-status');
+            const playText = document.getElementById('play-text');
+            const playIcon = document.getElementById('play-icon');
+            const leftReel = document.getElementById('left-reel');
+            const rightReel = document.getElementById('right-reel');
+
+            if (active) {
+                statusLabel.textContent = 'PLAYING';
+                statusLabel.className = 'bg-emerald-500 px-3 py-0.5 rounded-full text-xs font-bold uppercase border-retro border animate-pulse';
+                playText.textContent = 'Jeda Musik';
+                playIcon.className = 'fa-solid fa-pause mr-2';
+                leftReel.classList.add('spinning');
+                rightReel.classList.add('spinning');
+            } else {
+                statusLabel.textContent = 'STOPPED';
+                statusLabel.className = 'bg-retro-red px-3 py-0.5 rounded-full text-xs font-bold uppercase border-retro border';
+                playText.textContent = 'Putar Musik';
+                playIcon.className = 'fa-solid fa-play mr-2';
+                leftReel.classList.remove('spinning');
+                rightReel.classList.remove('spinning');
+            }
+        }
+
+        // Piket Today Highlight
+        function setupTodayPiket() {
+            const dayNames = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum\'at', 'Sabtu'];
+            const todayIndex = new Date().getDay();
+            document.getElementById('current-day-name').textContent = dayNames[todayIndex];
+
+            const piketDays = { 1: 'piket-senin', 2: 'piket-selasa', 3: 'piket-rabu', 4: 'piket-kamis', 5: 'piket-jumat' };
+            const activeCardId = piketDays[todayIndex];
+
+            if (activeCardId) {
+                const card = document.getElementById(activeCardId);
+                if (card) card.classList.add('ring-4', 'ring-retro-orange', 'bg-retro-cream');
+            }
+        }
+
+        // Lightbox Handler
+        function openLightbox(imgSrc, caption) {
+            document.getElementById('lightbox-img').src = imgSrc;
+            document.getElementById('lightbox-caption').textContent = caption;
+            document.getElementById('lightbox').classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+        }
+
+        // Guestbook LocalStorage Logic
+        const defaultMessages = [
+            { name: 'Ibu Sri Rahayu Budiarti, S.E.', text: 'Semangat terus anak-anakku VI Ibnu Sina! Jadilah generasi yang sholeh & cerdas! 🌟', time: '10 Okt' },
+            { name: 'Farisha (Ketua Kelas)', text: 'Kompak terus yaa teman-teman Angkatan 27! Fresh Fresh Fresh Allahuakbar! 🔥', time: '10 Okt' }
+        ];
+
+        function loadGuestbook() {
+            const stored = localStorage.getItem('ibnu_sina_guestbook');
+            const messages = stored ? JSON.parse(stored) : defaultMessages;
+            renderMessages(messages);
+        }
+
+        function renderMessages(messages) {
+            const container = document.getElementById('messages-container');
+            document.getElementById('message-count').textContent = `${messages.length} Pesan`;
+            
+            container.innerHTML = messages.map(msg => `
+                <div class="bg-white border-retro rounded-xl p-3 shadow-retro-sm">
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="font-retro font-bold text-retro-orange text-sm">${escapeHtml(msg.name)}</span>
+                        <span class="text-[10px] bg-retro-cream px-2 py-0.5 rounded border border-retro text-gray-600">${msg.time}</span>
+                    </div>
+                    <p class="text-xs font-medium text-retro-dark">${escapeHtml(msg.text)}</p>
+                </div>
+            `).join('');
+        }
+
+        function saveMessage(e) {
+            e.preventDefault();
+            const nameInput = document.getElementById('sender-name');
+            const msgInput = document.getElementById('sender-message');
+
+            const name = nameInput.value.trim();
+            const text = msgInput.value.trim();
+            if (!name || !text) return;
+
+            const stored = localStorage.getItem('ibnu_sina_guestbook');
+            const messages = stored ? JSON.parse(stored) : [...defaultMessages];
+
+            const now = new Date();
+            messages.unshift({ name, text, time: `${now.getDate()} ${now.toLocaleString('id-ID', { month: 'short' })}` });
+            localStorage.setItem('ibnu_sina_guestbook', JSON.stringify(messages));
+
+            renderMessages(messages);
+            nameInput.value = '';
+            msgInput.value = '';
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' })[m]);
+        }
+
+        window.onload = function() {
+            setupTodayPiket();
+            loadGuestbook();
+        };
+    </script>
+</body>
+</html>
